@@ -1,0 +1,2 @@
+name = "vertico"
+build = 'cargo build --release --locked --target wasm32-wasip2 && cp target/wasm32-wasip2/release/forge_vertico.wasm "$OUT"'

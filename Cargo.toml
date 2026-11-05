@@ -1,0 +1,28 @@
+[package]
+name = "forge-vertico"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0-or-later"
+description = "Vertical minibuffer completion with orderless matching and marginalia-style annotations"
+
+[package.metadata.forge]
+name = "vertico"
+
+
+# Standalone: not part of the main workspace build.
+[workspace]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+forge-plugin-sdk = { git = "https://github.com/martial-plains/forge" }
+
+[dev-dependencies]
+# Only for the unit tests: the sorting names must be ones the host accepts.
+# A real dependency would drag wasmtime into the wasm32 build.
+forge-core = { git = "https://github.com/martial-plains/forge" }
+
+[profile.release]
+opt-level = "s"
+lto = true
