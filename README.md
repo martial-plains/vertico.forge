@@ -7,7 +7,7 @@ Add this to `~/.config/forge/init.rhai`:
 
 ```rhai
 use_package("vertico", #{
-  vc: "https://github.com/martial-plains/forge-plugin-vertico",
+  vc: "git@github.com:martial-plains/vertico.forge.git",
   demand: true,
 });
 ```
